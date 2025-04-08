@@ -31,13 +31,13 @@ defmodule Faker.Phone.EnGb do
   ## Examples
 
       iex> Faker.Phone.EnGb.number()
-      "+44042646108"
+      "+44054264610"
       iex> Faker.Phone.EnGb.number()
-      "07897 052357"
+      "+44562970523"
       iex> Faker.Phone.EnGb.number()
-      "+44803032097"
+      "+447502 030320"
       iex> Faker.Phone.EnGb.number()
-      "+447776 033745"
+      "+447933 760337"
   """
   @spec number() :: String.t()
   def number do
@@ -54,13 +54,13 @@ defmodule Faker.Phone.EnGb do
   ## Examples
 
       iex> Faker.Phone.EnGb.landline_number()
-      "+44335426461"
+      "+44331542646"
       iex> Faker.Phone.EnGb.landline_number()
-      "+44343297052"
+      "+44560832970"
       iex> Faker.Phone.EnGb.landline_number()
-      "+44567020303"
+      "+44023570203"
       iex> Faker.Phone.EnGb.landline_number()
-      "+44709733760"
+      "+44703209733"
   """
   @spec landline_number() :: String.t()
   def landline_number do

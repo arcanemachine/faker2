@@ -1,4 +1,18 @@
-# Faker
+# Faker (Fork)
+
+> #### TLDR {: .info}
+>
+> This is a fork of the project [Faker](https://hex.pm/packages/faker/) which is intended to fix showstopper issues (e.g. hard deprecations in newer versions of Elixir) until the maintainers of the main project can bring the project up to speed on their own, or are willing to add new maintainers to the main project.
+>
+> Switching to this project should be nearly effortless:
+>   - Rename the dependency in `mix.exs` from `:faker` to `:faker_fork`
+>     - The minimum supported version is `0.19.0`, but `~> 0.19.1` is recommended.
+>   - Run `mix deps.get`
+>   - That's it!
+>
+> Please visit [this fork's GitHub Issues page](https://github.com/arcanemachine/faker/issues) if you have any issues.
+
+> If any maintainers are reading this: [Let's get in touch!](mailto:arcanemachine@gmail.com) :)
 
 [![build](https://github.com/elixirs/faker/actions/workflows/ci.yaml/badge.svg)](https://github.com/elixirs/faker/actions/workflows/ci.yaml)
 [![Version](https://img.shields.io/hexpm/v/faker.svg?style=flat-square)](https://hex.pm/packages/faker)
@@ -26,12 +40,12 @@ fake data.
 
 ## Quickstart
 
-* add `{:faker, "~> 0.19.0-alpha.1"}` to your deps in `mix.exs`:
+* add `{:faker_fork, "~> 0.19.1"}` to your deps in `mix.exs`:
 
     ```elixir
     defp deps do
       [
-        {:faker, "~> 0.19.0-alpha.1", only: :test}
+        {:faker_fork, "~> 0.19.1", only: :test}
       ]
     end
     ```
@@ -63,7 +77,7 @@ See [documentation](http://hexdocs.pm/faker/) and [usage examples](https://githu
 ## Troubleshooting
 
 * If you get a message like the one below when you call `Faker.Address.city/0`,
-you need to add `:faker` to your application's mix file, in the `applications`
+you need to add `:faker_fork` to your application's mix file, in the `applications`
 function, as above.
 
     ```

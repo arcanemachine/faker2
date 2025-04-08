@@ -8,7 +8,7 @@ defmodule Faker do
   """
   @spec start() :: :ok
   def start do
-    :application.start(:faker)
+    :application.start(:faker_fork)
   end
 
   @doc """
@@ -16,7 +16,7 @@ defmodule Faker do
   """
   @spec start(atom) :: :ok
   def start(lang) when is_atom(lang) do
-    :application.start(:faker)
+    :application.start(:faker_fork)
     locale(lang)
     :ok
   end
@@ -77,7 +77,7 @@ defmodule Faker do
   """
   @spec locale() :: atom
   def locale do
-    Application.get_env(:faker, :locale)
+    Application.get_env(:faker_fork, :locale)
   end
 
   @doc """
@@ -85,7 +85,7 @@ defmodule Faker do
   """
   @spec country() :: atom
   def country do
-    Application.get_env(:faker, :country)
+    Application.get_env(:faker_fork, :country)
   end
 
   @doc """
@@ -93,7 +93,7 @@ defmodule Faker do
   """
   @spec locale(atom) :: :ok
   def locale(lang) when is_atom(lang) do
-    Application.put_env(:faker, :locale, lang)
+    Application.put_env(:faker_fork, :locale, lang)
   end
 
   @doc """
@@ -106,7 +106,7 @@ defmodule Faker do
   """
   @spec random_uniform() :: float
   def random_uniform() do
-    Application.get_env(:faker, :random_module).random_uniform()
+    Application.get_env(:faker_fork, :random_module).random_uniform()
   end
 
   @doc """
@@ -119,7 +119,7 @@ defmodule Faker do
   """
   @spec random_between(integer, integer) :: integer
   def random_between(left, right) do
-    Application.get_env(:faker, :random_module).random_between(left, right)
+    Application.get_env(:faker_fork, :random_module).random_between(left, right)
   end
 
   @doc """
@@ -127,7 +127,7 @@ defmodule Faker do
   """
   @spec random_bytes(pos_integer) :: binary
   def random_bytes(total) do
-    Application.get_env(:faker, :random_module).random_bytes(total)
+    Application.get_env(:faker_fork, :random_module).random_bytes(total)
   end
 
   @doc """
@@ -135,7 +135,7 @@ defmodule Faker do
   """
   @spec shuffle(Enum.t()) :: list()
   def shuffle(enum) do
-    Application.get_env(:faker, :random_module).shuffle(enum)
+    Application.get_env(:faker_fork, :random_module).shuffle(enum)
   end
 
   defmacro localize(function) do
