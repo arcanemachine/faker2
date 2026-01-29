@@ -1,0 +1,4 @@
+# The latest tool versions that are expected to work
+
+elixir 1.20.0-rc.1-otp-28
+erlang 28.3.1

@@ -1,0 +1,7 @@
+# Minimum supported versions (Same as Elixir/Erlang security support schedules)
+#
+# You may symlink this file to your copy of the repo:
+#   - `ln -s .tool-versions.minimum .tool-versions`
+
+erlang 26.2.5.16
+elixir 1.15.8-otp-26

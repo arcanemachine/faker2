@@ -11,3 +11,4 @@
 /doc
 /node_modules
 erl_crash.dump
+.tool-versions
